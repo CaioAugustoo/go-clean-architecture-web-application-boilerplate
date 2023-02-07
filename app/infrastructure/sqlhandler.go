@@ -28,7 +28,7 @@ type Row struct {
 	Rows *sql.Rows
 }
 
-// NewSQLHandler returns connection and methos which is related to database handling.
+// NewSQLHandler returns connection and methods which is related to database handling.
 func NewSQLHandler() (interfaces.SQLHandler, error) {
 	sqlHandler := &SQLHandler{}
 	dataSourceName := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s", os.Getenv("DB_USER"), os.Getenv("DB_PASSWORD"), os.Getenv("DB_HOST"), os.Getenv("DB_PORT"), os.Getenv("DB_DATABASE"))
